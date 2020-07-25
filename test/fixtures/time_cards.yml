@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  month: 1
+  day: 1
+  in_at: 2020-07-25 14:53:01
+  out_at: 2020-07-25 14:53:01
+
+two:
+  year: 1
+  month: 1
+  day: 1
+  in_at: 2020-07-25 14:53:01
+  out_at: 2020-07-25 14:53:01

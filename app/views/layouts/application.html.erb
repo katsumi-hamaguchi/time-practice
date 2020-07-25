@@ -9,6 +9,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to ' 出退勤管理', new_user_registration_path,class: "navbar-brand" %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+         <%= link_to ' ユーザー新規登録', new_user_registration_path, type: 'button', class: 'btn btn-default navbar-btn a_h_btn' %>
+        <%= link_to ' 会員ログイン', new_user_session_path, type: 'button', class: 'btn btn-default navbar-btn a_h_btn' %>
+        <%= link_to ' 管理者新規登録', new_admin_registration_path, type: 'button', class: 'btn btn-default navbar-btn a_h_btn' %>
+        <%= link_to ' 管理者ログイン', new_admin_session_path, type: 'button', class: 'btn btn-default navbar-btn a_h_btn' %>
+      </ul>
+    </div>
+  </nav>
+</header>
+
   <body>
     <%= yield %>
   </body>
