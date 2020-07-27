@@ -11,11 +11,17 @@ Rails.application.routes.draw do
   passwords:     'users/passwords',
   registrations: 'users/registrations'
   }#各モデルのコントローラを個別に指定できるように変更
-  resources :users
+  resources :users do
+  	resources :time_cards
+  end
   resources :admins
-  resources :time_cards
+  
 
   namespace :admin do
+  	root "homes#top"
+  end
+
+  namespace :user do
   	root "homes#top"
   end
 end

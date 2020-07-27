@@ -1,0 +1,15 @@
+<h1>タイムカード打刻画面</h1>
+<div class='row'>
+  <div class='col-xs-6'>
+  	<p>今日は <%= Date.today %>です。</p>
+  	<p></p>
+  </div>
+</div>
+<p>現在状況</p>
+<%= form_tag(user_time_cards_path, method: :post) do %> 
+  <%= submit_tag('出社', name: 'in', id: 'in', disabled: !!@time_card.in_at, class: 'btn btn-default')%>
+  <%= submit_tag('退社', name: 'out', id: 'out', disabled: !@time_card.in_at || !!@time_card.out_at, class: 'btn btn-default')%> 
+<% end %>
+<div>
+	<%= button_to '勤務表確認', user_time_cards_path, method: :get, class: 'btn btn-default'%>
+</div>

@@ -1,0 +1,28 @@
+<h1>タイムカード一覧画面<%= @year %>年<%= @month %>月度勤務一覧</h1>
+  <table class="table, table-bordered, table-condensed">
+  	<thead>
+  		<tr>
+  			<th>日付</th>
+  			<th>曜</th>
+  			<th>出社時間</th>
+  			<th>退社時間</th>
+  			<th>勤務時間</th>
+  		</tr>
+  	</thead>
+  
+  	<tbody>
+  		<tr>
+  			<td></td>
+  			<td></td>
+        <% if @time_cards.blank? %>
+  			<td></td>
+  			<td></td>
+  			<td></td>
+        <% else %>
+  			<td><%= @time_card.in_at %></td>
+  			<td><%= @time_card.out_at %></td>
+  			<td></td>
+  	    <%end%>
+  		</tr>
+  	</tbody>
+  </table>
