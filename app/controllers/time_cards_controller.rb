@@ -8,6 +8,7 @@ class TimeCardsController < ApplicationController
 	    @month = today.month
 	    @time_cards = monthly_time_cards(current_user, @year, @month)
 	    @time_card = TimeCard.today(current_user)
+	    @times = TimeCard.all
 	  end
 
 	  def show

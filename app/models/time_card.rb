@@ -40,6 +40,7 @@ class TimeCard < ApplicationRecord
     end
   end
   
+  
   private
 
     # カスタムバリデーション（正しい日付か？）

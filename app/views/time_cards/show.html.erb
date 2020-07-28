@@ -6,6 +6,7 @@
   </div>
 </div>
 <p>現在状況</p>
+<%= @time_card.working_status %>
 <%= form_tag(user_time_cards_path, method: :post) do %> 
   <%= submit_tag('出社', name: 'in', id: 'in', disabled: !!@time_card.in_at, class: 'btn btn-default')%>
   <%= submit_tag('退社', name: 'out', id: 'out', disabled: !@time_card.in_at || !!@time_card.out_at, class: 'btn btn-default')%> 

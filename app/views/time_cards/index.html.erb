@@ -9,20 +9,21 @@
   			<th>勤務時間</th>
   		</tr>
   	</thead>
-  
+  <% @times.each do |date| %>
   	<tbody>
   		<tr>
+  			<td><%= date.date.day %></td>
   			<td></td>
-  			<td></td>
-        <% if @time_cards.blank? %>
+        <% if date.blank? %>
   			<td></td>
   			<td></td>
   			<td></td>
         <% else %>
-  			<td><%= @time_card.in_at %></td>
-  			<td><%= @time_card.out_at %></td>
-  			<td></td>
+  			<td><%= date.in_at %></td>
+  			<td><%= date.out_at %></td>
+  			<td><%= date.work_hours_in_seconds%></td>
   	    <%end%>
   		</tr>
   	</tbody>
+  <% end %>
   </table>
