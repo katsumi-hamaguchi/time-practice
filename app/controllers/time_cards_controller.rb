@@ -26,9 +26,9 @@ class TimeCardsController < ApplicationController
 	    end
 
 	    if @time_card.save
-	      render json: { status: 'success', time_card: @time_card, working_status: @time_card.working_status }
+	       redirect_to user_path(current_user)
 	    else
-	      render json: { status: 'error' }
+	       root_path
 	    end
 	  end
 

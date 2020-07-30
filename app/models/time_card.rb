@@ -18,11 +18,11 @@ class TimeCard < ApplicationRecord
   def working_status
     case [!!in_at, !!out_at]
     when [false, false]
-      :not_arrived # 未出社
+      :未出社 # 未出社
     when [true, false]
-      :working # 勤務中
+      :勤務中 # 勤務中
     when [true, true]
-      :left # 退社済
+      :退社済み # 退社済
     end
   end
 
