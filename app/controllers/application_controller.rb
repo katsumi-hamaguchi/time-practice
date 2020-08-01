@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     when User
     user_path(current_user.id)
     when Admin
-    admin_root_path
+    admin_root_path(current_admin.id)
     end
   end #ユーザーと管理者のログイン後の移動ページをそれぞれ指定
 
