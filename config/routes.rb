@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	root "homes#top"
+    resources :admins
   end
 
   namespace :user do
