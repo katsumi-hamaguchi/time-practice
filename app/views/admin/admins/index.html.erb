@@ -1,1 +1,6 @@
 <div>管理者側index</div>
+
+<% @users.each do |user| %>
+<%= user.name %>
+<%= user.email %>
+<% end %>
